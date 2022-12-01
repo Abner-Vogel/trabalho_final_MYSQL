@@ -1,0 +1,66 @@
+ erDiagram
+    Cinema||--o{ nome: nome 
+    Cinema||--o{ sessao: sessao
+    Cinema||--o{ localizacao: localizacao
+    Cinema||--o{ ingresso: ingresso
+    Cinema||--o{ alimentacao: alimentos
+    Cinema||--o{ filme: filme
+    Cinema||--o{ preco: preco
+    Cinema{
+        int id_cinema PK
+        string nome FK
+        int sessao FK
+        string localizacao FK
+        int ingresso FK
+        string alimentacao FK
+        string filme FK
+        int preco FK
+    }
+
+    nome{ 
+        int id_nome PK
+        string nome
+    }
+
+    sessao{
+        int id_sessao PK
+        int lugares
+        int pessoas
+    }
+
+    localizacao{
+        int id_localizacao PK
+        string rua
+        string bairro
+        string cidade
+    }
+
+    ingresso{
+        int id_ingresso PK
+        int valor
+        string tipo
+        
+    }
+
+    alimentacao{
+        int id_alimentacao PK
+        string preco
+        int quantidade
+
+    }
+
+    filme{
+        int id_filme PK
+        string nome
+        string genero
+        int idade_minima
+        string diretor
+
+    }
+
+    preco{
+        int id_preco PK
+        int valor
+        int numero_ingressos
+    
+    }
